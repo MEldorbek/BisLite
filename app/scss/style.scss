@@ -2,6 +2,7 @@
 @import 'fonts';
 .header {
     background-color: #e8ebf1;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.07);
     &__inner {
         display: flex;
         justify-content: space-between;
@@ -84,7 +85,7 @@
                 color: #2aacc8;
                 border-top: 5px solid #2aacc8;
                 background-color: #fff;
-                transition: all .3s;
+                transition: all 1s;
             }
         }
     }
@@ -107,6 +108,7 @@
                 height: auto;
                 overflow: visible;
                 opacity: 1;
+                transition: all 1s;
             }
         }
     }
@@ -115,4 +117,42 @@
 .header__drop-down .drop-down__list li {
     margin-left: 0;
     display: block;
+}
+
+.slider {
+    background-color: #81e4ed;
+    padding: 20px 0px 10px;
+    &__item {
+        background-image: url(../images/slider-bg.jpg);
+        min-height: 440px;
+        background-position: top center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        &-title {
+            font-size: 50px;
+            color: #fff;
+            width: 330px;
+            margin-left: 60px;
+            font-weight: 700;
+            padding-top: 90px;
+        }
+    }
+}
+
+.slick-dots li {
+    margin: 0 9px;
+    width: auto;
+    height: auto;
+    &.slick-active button {
+        background-color: #fff;
+    }
+    & button {
+        width: 14px;
+        height: 14px;
+        background-color: rgba($color: #626262, $alpha: 0.5);
+        border-radius: 50%;
+        &::before {
+            display: none;
+        }
+    }
 }
