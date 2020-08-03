@@ -40,6 +40,7 @@
         border-top: none;
         box-shadow: 0px 5px 0px 0px rgba(42, 172, 200, 0.004);
         padding: 10px 5px;
+        z-index: 1;
         & a {
             padding: 12px 0 12px 11px;
             font-weight: 400;
@@ -76,6 +77,7 @@
             margin-left: 20px;
         }
         &:hover {
+            transition: all .5s;
             &.drop-down__list {
                 height: auto;
                 overflow: visible;
@@ -85,7 +87,6 @@
                 color: #2aacc8;
                 border-top: 5px solid #2aacc8;
                 background-color: #fff;
-                transition: all 1s;
             }
         }
     }
@@ -108,7 +109,7 @@
                 height: auto;
                 overflow: visible;
                 opacity: 1;
-                transition: all 1s;
+                transition: all .5s;
             }
         }
     }
@@ -129,11 +130,13 @@
         background-size: cover;
         background-repeat: no-repeat;
         &-title {
+            font-family: 'arial', sans-serif;
             font-size: 50px;
             color: #fff;
             width: 330px;
             margin-left: 60px;
             font-weight: 700;
+            line-height: 55px;
             padding-top: 90px;
         }
     }
@@ -155,4 +158,64 @@
             display: none;
         }
     }
+}
+
+.items {
+    background-color: #e8ebf1;
+    padding: 60px 0px 50px;
+    border-bottom: 1px solid #d9d9d9;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.item {
+    width: 225px;
+    font-family: 'arial', sans-serif;
+    &__title {
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 20px;
+        text-transform: uppercase;
+        padding: 10px 0px 0px 60px;
+        margin-bottom: 30px;
+        position: relative;
+    }
+    &__icons {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        background: #2aacc8;
+        border-radius: 50%;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__text {
+        font-size: 13px;
+        color: #363636;
+        margin-bottom: 25px;
+    }
+    &__link {
+        color: #2aacc8;
+        padding-left: 15px;
+        font-size: 13px;
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            background-image: url(../images/icons/arrow.svg);
+            left: 0;
+            width: 5px;
+            height: 7px;
+            top: 5px;
+        }
+    }
+}
+
+.telegram-icons {
+    margin-left: 5px;
 }
