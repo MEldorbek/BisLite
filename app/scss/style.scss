@@ -174,7 +174,6 @@
     width: 225px;
     font-family: 'arial', sans-serif;
     &__title {
-        font-size: 15px;
         font-weight: 700;
         line-height: 20px;
         text-transform: uppercase;
@@ -218,4 +217,82 @@
 
 .telegram-icons {
     margin-left: 5px;
+}
+
+.works {
+    &__title {
+        padding: 25px 0px 15px 40px;
+        position: relative;
+        font-family: 'arial', sans-serif;
+        font-weight: 700;
+        text-transform: uppercase;
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 20px;
+            background-image: url(../images/slider/cursor.svg);
+            width: 14px;
+            height: 24px;
+        }
+    }
+    &__inner {
+        padding: 20px 0 40px;
+        border-top: 1px solid #dfe1e5;
+        border-bottom: 1px solid #dfe1e5;
+        &-item {
+            text-align: center;
+        }
+        &-box {
+            display: inline-block;
+            position: relative;
+            &:hover {
+                & .works__inner-link {
+                    height: 80px;
+                }
+            }
+        }
+        &-link {
+            background-color: #81e4ed;
+            height: 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            overflow: hidden;
+            transition: all .5s;
+            & a {
+                margin: 0px 15px;
+            }
+        }
+    }
+}
+
+.slick {
+    &-arrow {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: #81e4ed;
+        &::before {
+            display: none;
+        }
+        &:hover {
+            background-color: #81e4ed;
+        }
+        &:focus {
+            background-color: #81e4ed;
+        }
+    }
+    &-prev {
+        right: 31px;
+        top: -27px;
+        left: auto;
+    }
+    &-next {
+        top: -27px;
+        right: 0;
+    }
 }
